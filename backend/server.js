@@ -13,7 +13,7 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 // Middleware
 app.use(express.json());
 app.use(cors({
-  origin: ['https://your-frontend.vercel.app', 'http://localhost:3000'],
+  origin: ['https://muthurwa.vercel.app', 'http://localhost:3000'],
   credentials: true
 }));
 app.use(morgan('dev'));
