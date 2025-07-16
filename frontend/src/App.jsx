@@ -9,6 +9,7 @@ import Deliveries from './pages/Deliveries'
 import Vendors from './pages/Vendors'
 import VendorDetail from './pages/VendorDetail'
 import Layout from './components/Layout'
+import Welcome from './pages/Welcome';
 
 function PrivateRoute({ children }) {
   const { user, loading } = useAuth()
@@ -24,13 +25,17 @@ function App() {
       <Router>
         <div className="min-h-screen bg-gray-50">
           <Routes>
+            {/* Public routes */}
+            <Route path="/" element={<Welcome />} />
             <Route path="/login" element={<Login />} />
+
+            {/* Protected routes */}
             <Route path="/" element={
               <PrivateRoute>
                 <Layout />
               </PrivateRoute>
             }>
-              <Route index element={<Dashboard />} />
+              <Route path="dashboard" element={<Dashboard />} />
               <Route path="buyers" element={<Buyers />} />
               <Route path="tomato-types" element={<TomatoTypes />} />
               <Route path="transactions" element={<Transactions />} />
