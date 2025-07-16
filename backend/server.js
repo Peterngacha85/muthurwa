@@ -14,9 +14,8 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use(express.json());
 app.use(cors({
   origin: [
-    'https://muthurwa.vercel.app', 
-    'https://muthurwa.fastweb.co.ke',     // Your deployed frontend
-    'http://localhost:3000'             // For local development
+    'https://muthurwa.vercel.app',      // Your Vercel frontend
+    'https://muthurwa.fastweb.co.ke',   // Any custom domain you use
   ],
   credentials: true
 }));
