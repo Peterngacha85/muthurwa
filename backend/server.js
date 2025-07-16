@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cors({
   origin: [
     'https://muthurwa.fastweb.co.ke',   // Any custom domain you use
-    'https://muthurwa.vercel.app',      // Your Vercel frontend
+    // 'https://muthurwa.vercel.app',      // Your Vercel frontend
   ],
   credentials: true
 }));
