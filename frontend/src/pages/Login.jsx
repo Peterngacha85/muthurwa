@@ -45,7 +45,7 @@ export default function Login() {
     }
     
     if (result.success) {
-      navigate('/')
+      navigate('/dashboard')
     } else {
       setError(result.error)
     }
